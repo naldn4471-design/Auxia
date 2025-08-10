@@ -130,8 +130,8 @@ intents = discord.Intents.default()
 intents.members = True
 intents.message_content = True
 
-client = discord.Client(intents=intents)
-tree = discord.app_commands.CommandTree(client)
+bot = commands.Bot(command_prefix="!", intents=intents)
+tree = bot.tree
 
 @client.event
 async def on_ready():
